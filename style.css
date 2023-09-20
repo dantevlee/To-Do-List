@@ -1,53 +1,77 @@
 body {
   display: flex;
   justify-content: center;
+  align-items: center;
+  height: 100vh;
   margin: 0;
   background-color: slateblue;
 }
 
+.center-container {
+  text-align: center;
+}
+
 .toDoForm {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
+  margin-bottom: 20px;
+}
+
+.input-container {
+  display: flex; 
+  justify-content: space-between;
+  align-items: center; 
+  width: 70%; 
+  margin: 1 auto; 
 }
 
 .inputToDo {
-  border: none; /* Remove default border */
-  border-radius: 20px; /* Adjust the border-radius to control the pill shape */
-  padding: 10px 20px; /* Add padding to the input field */
-  outline: none; /* Remove outline on focus */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow for depth */
-  font-size: 16px; /* Adjust font size as needed */
-  width: 300px;
+  flex-grow: 1;
+  border: 1px solid #ccc; 
+  border-radius: 20px; 
+  padding: 10px 15px; 
+  min-width: 350px;
+  min-height: 10px;
+  margin-right: 10px
+}
+
+.inputToDo::placeholder {
+  font-family: 'Roboto', sans-serif;
+  color: #6b6b6b; 
 }
 
 .submitButton {
-  background-color: #007bff;
-  color: #fff;
+  background-color: #3498db; 
+  color: white;
   border: none;
-  border-radius: 20px;
-  padding: 10px 20px;
-  font-size: 16px;
+  border-radius: 20px; 
+  padding: 10px 40px; 
+  min-width: 165px; 
   cursor: pointer;
-  transition: background-color 0.3s ease;
-  margin-left: 10px;
+  min-height: 10px;
+  transition: background-color 0.3s; 
+}
+
+.submitButton:hover {
+  background-color: #2980b9;
+}
+
+.list {
+  list-style: none;
+  padding: 0;
 }
 
 .task {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 5px;
+  padding: 5px 0;
+  border-bottom: 1px solid #ccc;
 }
 
-/* Optional: Add some styling to make it more visually appealing */
-.inputToDo::placeholder {
-  color: #999; /* Placeholder text color */
-}
-
-.inputToDo:focus {
-  box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+.text {
+  margin-right: 10px;
+  font-size: x-large;
+  color: whitesmoke;
+  font-family: 'Roboto', sans-serif;
 }
 
 .delete-button {
@@ -56,22 +80,4 @@ body {
   border: none;
   padding: 5px 10px;
   cursor: pointer;
-  margin-left: 10px; 
-}
-
-.task {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 10px;
-}
-
-.list{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.text {
-  flex-grow: 1; 
 }
